@@ -1,7 +1,10 @@
-web:
-  build: .
-  ports:
-    - "80:80"
-    - "443:443"
-  volumes:
-    - ".:/var/www/html"
+version: "2"
+services:
+  web:
+    build: .
+    image: hoanglala/ubuntu-apache-php
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ".:/var/www/html"
